@@ -69,7 +69,7 @@ const footloose = config => ({
   {
     count: 1,
     spec: {
-      image: 'chanwit/minifk-master',
+      image: 'chanwit/minifk-worker',
       name: 'worker-%d',
       backend: config.backend,
       ignite: {
