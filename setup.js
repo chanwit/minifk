@@ -40,7 +40,7 @@ const footloose = config => ({
   machines: [{
     count: 1,
     spec: {
-      image: 'chanwit/fk-covid-master',
+      image: 'chanwit/minifk-master',
       name: 'master-%d',
       backend: config.backend,
       ignite: {
@@ -63,13 +63,13 @@ const footloose = config => ({
         hostPort: 30080,
       }],
       privileged: privileged(config),
-      volumes: volumes('fkcovid-0', config),
+      volumes: volumes('minifk-0', config),
     },
   },
   {
     count: 1,
     spec: {
-      image: 'chanwit/fk-covid-worker',
+      image: 'chanwit/minifk-master',
       name: 'worker-%d',
       backend: config.backend,
       ignite: {
@@ -92,7 +92,7 @@ const footloose = config => ({
         hostPort: 30080,
       }],
       privileged: privileged(config),
-      volumes: volumes('fkcovid-1', config),
+      volumes: volumes('minifk-1', config),
     },
   }],
 });
