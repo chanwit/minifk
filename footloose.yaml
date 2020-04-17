@@ -10,7 +10,7 @@ machines:
       diskSize: 5GB
       kernel: chanwit/ignite-kernel:4.19.47
       memory: 4GB
-    image: chanwit/fk-covid-master
+    image: chanwit/minifk-master
     name: master-%d
     portMappings:
     - containerPort: 22
@@ -24,7 +24,7 @@ machines:
     privileged: true
     volumes:
     - destination: /var/lib/docker
-      source: fkcovid-0
+      source: minifk-0
       type: volume
 - count: 1
   spec:
@@ -34,7 +34,7 @@ machines:
       diskSize: 5GB
       kernel: chanwit/ignite-kernel:4.19.47
       memory: 4GB
-    image: chanwit/fk-covid-worker
+    image: chanwit/minifk-master
     name: worker-%d
     portMappings:
     - containerPort: 22
@@ -48,5 +48,5 @@ machines:
     privileged: true
     volumes:
     - destination: /var/lib/docker
-      source: fkcovid-1
+      source: minifk-1
       type: volume
