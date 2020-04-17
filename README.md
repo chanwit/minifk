@@ -1,3 +1,3 @@
-# FK-Covid
+# MiniFK
 
-A Firekube distribution for inferencing COVID-19 using COVID-Net.
+MiniFK is a version of Firekube that disables the undo / cluster reset process, and enables caching disk as docker volumes to increase the startup time.
