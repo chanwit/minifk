@@ -459,7 +459,6 @@ metadata:
   labels:
     serving.knative.dev/release: "v0.14.0"
 data:
-  example.com: ""
   _example: |
     ################################
     #                              #
