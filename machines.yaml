@@ -19,8 +19,8 @@ items:
           address: 127.0.0.1
           port: 2222
     versions:
-      controlPlane: 1.14.1
-      kubelet: 1.14.1
+      controlPlane: 1.15.8
+      kubelet: 1.15.8
 - apiVersion: cluster.k8s.io/v1alpha1
   kind: Machine
   metadata:
@@ -40,6 +40,6 @@ items:
           address: 127.0.0.1
           port: 2223
     versions:
-      controlPlane: 1.14.1
-      kubelet: 1.14.1
+      controlPlane: 1.15.8
+      kubelet: 1.15.8
 kind: List
