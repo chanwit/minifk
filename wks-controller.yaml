@@ -47,7 +47,7 @@ spec:
           value: 172.17.0.1
         - name: FOOTLOOSE_BACKEND
           value: docker
-        image: chanwit/wksctl-controller:master-6c10e085
+        image: quay.io/wksctl/controller:v0.8.2-beta.5
         command:
         - /bin/controller
         - --verbose
