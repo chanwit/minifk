@@ -40,7 +40,7 @@ const footloose = config => ({
   machines: [{
     count: 1,
     spec: {
-      image: 'chanwit/minifk-master',
+      image: 'chanwit/minifk-master:1.15.9',
       name: 'master-%d',
       backend: config.backend,
       ignite: {
@@ -69,7 +69,7 @@ const footloose = config => ({
   {
     count: 1,
     spec: {
-      image: 'chanwit/minifk-worker',
+      image: 'chanwit/minifk-worker:1.15.9',
       name: 'worker-%d',
       backend: config.backend,
       ignite: {
