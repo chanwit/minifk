@@ -10,7 +10,7 @@ machines:
       diskSize: 5GB
       kernel: chanwit/ignite-kernel:4.19.47
       memory: 4GB
-    image: chanwit/minifk-master
+    image: chanwit/minifk-master:1.15.9
     name: master-%d
     portMappings:
     - containerPort: 22
@@ -34,7 +34,7 @@ machines:
       diskSize: 5GB
       kernel: chanwit/ignite-kernel:4.19.47
       memory: 4GB
-    image: chanwit/minifk-worker
+    image: chanwit/minifk-worker:1.15.9
     name: worker-%d
     portMappings:
     - containerPort: 22
