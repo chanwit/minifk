@@ -1,0 +1,30 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: client
+  name: client
+  namespace: default
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: client
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: client
+    spec:
+      containers:
+      - image: thakorn09/client:latest
+        imagePullPolicy: Always
+        name: client
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      terminationGracePeriodSeconds: 30
