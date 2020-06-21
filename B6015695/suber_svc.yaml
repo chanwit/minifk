@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: suber
+  name: suber
+  namespace: default
+spec:
+  ports:
+  - port: 8003
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: suber
+  sessionAffinity: None
+  type: ClusterIP

@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: adder
+  name: adder
+  namespace: default
+spec:
+  ports:
+  - port: 8002
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: adder
+  sessionAffinity: None
+  type: ClusterIP
