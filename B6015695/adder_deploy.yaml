@@ -1,0 +1,30 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: adder
+  name: adder
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: adder
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: adder
+    spec:
+      containers:
+      - image: newler55/adder
+        imagePullPolicy: IfNotPresent
+        name: adder
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      terminationGracePeriodSeconds: 30
